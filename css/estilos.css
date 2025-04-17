@@ -1,0 +1,112 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    color: #80CED7;
+
+}
+
+footer {
+
+    margin-top: 3em;
+    display: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #003249;
+
+}
+
+.cabezera {
+
+    background-color: #007EA7;
+
+}
+
+.fuente-base{
+
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+
+}
+
+.cuerpo {
+
+    background-color: #80CED7;
+
+}
+
+#user {
+
+    margin: 0.1em 0;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #80CED7;
+    text-align: center;
+    font-size: 2em;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+/* registro */
+
+.titulo-registro {
+
+    margin-top: 1em;
+    color: #007EA7;
+
+}
+
+.columna-tipo1 {
+
+    background-color: #CCDBDC;
+    height: auto;
+    
+
+}
+
+.columna-tipo2 {
+
+    background-color: #003249;
+    height: auto;
+    padding-bottom: 2em;
+
+}
+
+.input-registro {
+
+    color:  #007EA7 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid #007EA7 !important;
+    
+}
+
+.input-registro::placeholder {
+
+    color:  #007EA7 !important;
+    
+}
+
+.botonRegistro {
+
+    color:  #CCDBDC !important;
+    background-color: #003249 !important;
+    font-family: "Alfa Slab One", serif !important;
+    font-size: 1.5em !important;
+}
+
+.iconoUsuario {
+
+    margin-top: -10px;
+    
+
+}
+
+#imagenRegistro {
+
+    display: none;
+
+}

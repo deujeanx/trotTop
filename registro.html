@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee+Spice&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="cuerpo">
+    <header class="container-fluid">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="fuente-base titulo-registro">TrotTop</h1>
+            </div>
+        </div>
+    </header>
+    <section class="container-fluid">
+        <div class="row justify-content-center mt-3">
+            <div class="col-3 m-2 rounded columna-tipo1">
+                <h2 class="titulo-registro fuente-base">REGISTRARSE</h2>
+                <input class="fuente-base mt-2 form-control  input-registro" id="nombreRegistro" type="text" placeholder="NOMBRE">
+                <input class="fuente-base mt-2 form-control input-registro" id="contraseñaRegistro" type="password" placeholder="CONTRASEÑA">
+                <label for="imagenRegistro" class="fuente-base mt-2 form-control input-registro">IMAGEN DE PERFIL</label>
+                <input id="imagenRegistro" type="file" accept="image/*">
+                <button id="botonRegistrar" class="btn botonRegistro fuente-base mt-2">Registrase</button>
+            </div>
+            <div class="col-4 fs-3 rounded columna-tipo2">
+                <p>Empieza a planear tu día a día y a lograr tus metas poco a poco con trotTop te ayudaremos a enfocarte y a tener objetivos claros y te mostraremos los pasos que debes dar para llegar a la cima</p>
+            </div>
+            <div class="col-3 m-2 rounded columna-tipo1">
+                <h2 class="titulo-registro fuente-base">INICIAR SESION</h2>
+                <input class="fuente-base mt-2 form-control  input-registro" id="nombreSesion" type="text" placeholder="NOMBRE">
+                <input class="fuente-base mt-2 form-control input-registro" id="contraseñaSesion" type="password" placeholder="CONTRASEÑA">
+                <button id="botonIniciarSesion" class="btn botonRegistro fuente-base mt-2">Iniciar sesion</button>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <p>Created by Jean Sebastian Banguera & Anggelina Mendez</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/registro.js"></script>
+</body>
+</html>
