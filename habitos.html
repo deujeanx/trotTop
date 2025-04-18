@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee+Spice&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="cuerpo">
+    <header class="cabezera container-fluid">
+        <div class="row justify-content-between">
+            <div class="col">
+                <h1 class="fuente-base">TrotTop</h1>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <div class="mt-1">
+                    <a href="index.html"><i class="fa-solid fa-arrow-right-from-bracket text-white fs-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="row d-flex justify-content-center ">
+            <div class="col-12">
+                <h2 class="text-center color-regular fuente-base mt-3">Habitos</h2>
+            </div>
+            <div class="col-11 rounded p-2 mt-3 fondo-claro">
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#ejercicioModal">
+                        <div id="ejercicio" class="col-12 d-flex rounded fondo-oscuro mt-2 p-2">
+                            <div class="col-2 fs-1 ms-2">
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+                            <div class="col-5 ms-5 mt-2 align-self-center ">
+                                <h3>EJERCICIO</h3>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade" id="ejercicioModal" tabindex="-1">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="fuente-base fs-5">Empecemos a ejercitar esos musculos</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p class="text-black">Este habito hara que tengas una buena salud, ayuda a las articulaciones y te pone mucho mas guap@, te diremos que parte del cuerpo puedes ejercitar por día</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                              <button id="botonEjercicio" type="button" class="btn btn-primary">Empezar habito</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#tomarAguaModal">
+                        <div id="tomarAgua" class="col-12 d-flex rounded fondo-oscuro mt-2 p-2">
+                            <div class="col-2 fs-1 ms-2">
+                                <i class="fa-solid fa-bottle-water"></i>
+                            </div>
+                            <div class="col-5 ms-5 mt-2 align-self-center ">
+                                <h3>TOMAR AGUA</h3>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade" id="tomarAguaModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="fuente-base fs-5">Empecemos a tomar agua regularmente</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-black">Este habito te mantendra hidratado y tus riñones te lo agradeceran, al iniciar este habito te diremos la cantidad de agua que debes tomar por día</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button id="botonTomarAgua" type="button" class="btn btn-primary">Empezar habito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#LecturaModal">
+                        <div id="lectura" class="col-12 d-flex rounded fondo-oscuro mt-2 p-2">
+                            <div class="col-2 fs-1 ms-2">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+                            <div class="col-5 ms-5 mt-2 align-self-center ">
+                                <h3>LECTURA</h3>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade" id="LecturaModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="fuente-base fs-5">Empecemos a leer</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-black">La lectura es un excelente habito que te ayudara a mantener tu concentracion, aprender mucha cultura, historis y miles de otras cosas, empieza este habito y llevaremos el registro de los capitulos que leas</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button id="botonLeer" type="button" class="btn btn-primary">Empezar habito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#añadirModal">
+                        <div id="crearHabito" class="col-12 d-flex rounded fondo-oscuro mt-2 p-2">
+                            <div class="col-2 fs-1 ms-2">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div class="col-5 ms-5 mt-2 align-self-center ">
+                                <h3>CREAR HABITO</h3>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade" id="añadirModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="fuente-base fs-5">Dinos cual es ese habito que llevaras al maximo</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <input id="nombreHabito" type="text" class="form-control" placeholder="Nombre del habito">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button id="botonAñadir" type="button" class="btn btn-primary">Empezar habito</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <p>Created by Jean Sebastian Banguera & Anggelina Mendez</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/habitos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

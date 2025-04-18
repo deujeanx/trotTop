@@ -1,4 +1,5 @@
-const userHeader = document.getElementById('user')
+const userHeader = document.getElementById('user');
+const cuerpoHabitos = document.getElementById('cuerpoHabitos');
 
 // localStorage.clear();
 
@@ -21,10 +22,37 @@ if (!usuario) {
 
     const imagen = document.createElement('img');
     imagen.src = usuario.image;
-    imagen.classList.add('img-fluid', 'iconoUsuario')
+    imagen.addEventListener('click', ()=> window.location.href = 'opciones.html');
+    imagen.classList.add('img-fluid', 'iconoUsuario');
 
     userHeader.appendChild(imagen);
 
 }
 
-console.log(usuario)
+// Imprime habitos segun usuario
+
+if (!usuario.habitos){
+
+    const crearHabito = document.createElement('div');
+
+    if(!usuario){
+
+        crearHabito.addEventListener('click', ()=> window.location.href = 'registro.html')
+
+    } else {
+
+        crearHabito.addEventListener('click', ()=> window.location.href = 'habitos.html')
+
+    }
+
+    
+    crearHabito.classList.add('rounded-circle', 'text-white', 'circulo-añadir');
+    crearHabito.style.backgroundColor = '#003249';
+    const icono = document.createElement('i');
+    icono.classList.add('fa-solid', 'fa-plus');
+
+    crearHabito.appendChild(icono);
+
+    cuerpoHabitos.appendChild(crearHabito);
+
+};

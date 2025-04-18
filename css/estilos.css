@@ -1,8 +1,35 @@
+/* General */
+
+.fondo-claro {
+
+    background-color: #CCDBDC;
+
+}
+
+.color-regular {
+
+    color: #007EA7;
+
+}
+
+.color-oscuro {
+
+    color: #003249;
+
+}
+
+.fondo-oscuro {
+
+    background-color: #003249;
+
+}
+
 * {
 
     padding: 0;
     margin: 0;
     color: #80CED7;
+    text-decoration: none !important ;
 
 }
 
@@ -108,5 +135,25 @@ footer {
 #imagenRegistro {
 
     display: none;
+
+}
+
+/* Pagina principal */
+
+.circulo-añadir {
+
+    margin: 0.1em 0;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    font-size: 2em;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+#cuerpoHabitos {
+
+    background-color: #CCDBDC;
 
 }

@@ -14,65 +14,79 @@ botonRegistrar.addEventListener('click', ()=> {
     const contraseña = document.getElementById('contraseñaRegistro').value;
     const imagen = document.getElementById('imagenRegistro').files[0];
 
-    let lector = new FileReader();
+    if (name && contraseña){
 
-    let image = null
+        let lector = new FileReader();
 
-    lector.readAsDataURL(imagen);
+        let image = null
 
-    lector.onload =  ()=> {
+        if(imagen){
 
-        image = lector.result;
-        console.log(image);
-        const nuevoUsuario = {name, contraseña, image}
+            lector.readAsDataURL(imagen);
 
-    fetch(usuariosApi).then(usuarios =>{
+        }
 
-        return usuarios.json()
+        lector.onload =  ()=> {
 
-    }).then(usuarios =>{
+            image = lector.result;
+            console.log(image);
+            const nuevoUsuario = {name, contraseña, image}
 
-        usuarios.forEach(usuario =>{
+        fetch(usuariosApi).then(usuarios =>{
+
+            return usuarios.json()
+
+        }).then(usuarios =>{
+
+            usuarios.forEach(usuario =>{
 
 
-            if (name == usuario.name){
+                if (name == usuario.name){
 
-                
+                    
 
-                permitirRegistro = false;
+                    permitirRegistro = false;
+
+                }
+
+            })
+
+            if(permitirRegistro == true){
+
+                fetch(usuariosApi, {
+
+                    method: 'POST',
+                    headers: {'content-Type': 'application/json'},
+                    body: JSON.stringify(nuevoUsuario)
+
+                }).then(usuarios =>{
+
+                    alert("Usuario registrado exitosamente, Por favor inicie sesion");
+
+                }).catch(error =>{
+                    
+                    alert("No se pudo concretar el registro",error);
+
+                })
+
+            } else {
+
+                alert("Ese usuario ya existe porfavor ingrese otro nombre")
 
             }
 
         })
 
-        if(permitirRegistro == true){
-
-            fetch(usuariosApi, {
-
-                method: 'POST',
-                headers: {'content-Type': 'application/json'},
-                body: JSON.stringify(nuevoUsuario)
-
-            }).then(usuarios =>{
-
-                alert("Usuario registrado exitosamente, Por favor inicie sesion");
-
-            }).catch(error =>{
-                
-                alert("No se pudo concretar el registro",error);
-
-            })
-
-        } else {
-
-            alert("Ese usuario ya existe porfavor ingrese otro nombre")
-
         }
 
-    })
+        console.log(name)
+
+
+    } else {
+
+        alert("Por favor llene todos los campos")
 
     }
-
     
 
 })
