@@ -25,14 +25,9 @@ botonAñadir.addEventListener('click', () => {
     
         }).then(usuarios => {
     
-            if (usuarios.habitos) {
-    
-    
-                console.log("se hace el if")
+            if (usuarios.habitos) {   
     
                 usuarios.habitos.forEach(habito =>{
-        
-                    console.log("se hace el forEach")
         
                     if (habito.nameHabito == nombreHabito){
             
@@ -50,18 +45,19 @@ botonAñadir.addEventListener('click', () => {
                 const nameHabito = nombreHabito;
                 const racha = 0;
                 const diaRacha = 1;
+                const icono = '<i class="fa-solid fa-pen-to-square"></i>';
         
                 let habitos;
     
                 if (usuarios.habitos) {
     
-                    usuarios.habitos.push({nameHabito, racha, diaRacha});
+                    usuarios.habitos.push({nameHabito, racha, diaRacha, icono});
         
                     habitos = {habitos: usuarios.habitos}
         
                 } else {
         
-                    habitos = {habitos: [{nameHabito, racha, diaRacha}]};
+                    habitos = {habitos: [{nameHabito, racha, diaRacha, icono}]};
         
                 }
         
@@ -73,14 +69,10 @@ botonAñadir.addEventListener('click', () => {
         
                 }).then(usuario => {
         
-                    console.log(usuarios)
         
                     alert("Nuevo habito iniciado");
-                    localStorage.setItem('usuarioLocal' ,JSON.stringify(usuarios))
-        
-                    let visual = JSON.parse(localStorage.getItem('usuarioLocal'))
-                    console.log(visual)
-                    window.location.href = 'index.html'
+                    subirUsuario()
+                    
         
                 }).catch(error => {
         
@@ -93,7 +85,7 @@ botonAñadir.addEventListener('click', () => {
 
     }else {
 
-        alert("Por favor ingrese correctamente los campos solicitados")
+        alert("Por favor ingrese correctamente los campos solicitados");
 
     }
 
@@ -110,11 +102,9 @@ botonLectura.addEventListener('click', () => {
         if (usuarios.habitos) {
 
 
-            console.log("se hace el if")
 
             usuarios.habitos.forEach(habito =>{
     
-                console.log("se hace el forEach")
     
                 if (habito.nameHabito == "Lectura"){
         
@@ -132,18 +122,19 @@ botonLectura.addEventListener('click', () => {
             const nameHabito = "Lectura";
             const racha = 0;
             const diaRacha = 1;
+            const icono =  '<i class="fa-solid fa-book-open-reader"></i>';
     
             let habitos;
 
             if (usuarios.habitos) {
 
-                usuarios.habitos.push({nameHabito, racha, diaRacha});
+                usuarios.habitos.push({nameHabito, racha, diaRacha, icono});
     
                 habitos = {habitos: usuarios.habitos}
     
             } else {
     
-                habitos = {habitos: [{nameHabito, racha, diaRacha}]};
+                habitos = {habitos: [{nameHabito, racha, diaRacha, icono}]};
     
             }
     
@@ -158,9 +149,7 @@ botonLectura.addEventListener('click', () => {
                 console.log(usuarios)
     
                 alert("Nuevo habito iniciado");
-                localStorage.setItem('usuarioLocal' ,JSON.stringify(usuarios))
-    
-                window.location.href = 'index.html'
+                subirUsuario()
     
             }).catch(error => {
     
@@ -183,13 +172,9 @@ botonAgua.addEventListener('click', ()=>{
 
         if (usuarios.habitos) {
 
-
-            console.log("se hace el if")
-
             usuarios.habitos.forEach(habito =>{
     
-                console.log("se hace el forEach")
-    
+
                 if (habito.nameHabito == "Tomar agua"){
         
                     permitirNuevoHabito = false;
@@ -206,18 +191,19 @@ botonAgua.addEventListener('click', ()=>{
             const nameHabito = "Tomar agua";
             const racha = 0;
             const diaRacha = 1;
-    
+            const icono = '<i class="fa-solid fa-bottle-water"></i>';
+
             let habitos;
 
             if (usuarios.habitos) {
 
-                usuarios.habitos.push({nameHabito, racha, diaRacha});
+                usuarios.habitos.push({nameHabito, racha, diaRacha, icono});
     
                 habitos = {habitos: usuarios.habitos}
     
             } else {
     
-                habitos = {habitos: [{nameHabito, racha, diaRacha}]};
+                habitos = {habitos: [{nameHabito, racha, diaRacha, icono}]};
     
             }
     
@@ -228,13 +214,9 @@ botonAgua.addEventListener('click', ()=>{
                 body: JSON.stringify(habitos)
     
             }).then(usuario => {
-    
-                console.log(usuarios)
-    
+
                 alert("Nuevo habito iniciado");
-                localStorage.setItem('usuarioLocal' ,JSON.stringify(usuarios))
-    
-                window.location.href = 'index.html'
+                subirUsuario()
     
             }).catch(error => {
     
@@ -242,7 +224,11 @@ botonAgua.addEventListener('click', ()=>{
     
             })
 
-        }   
+        } else {
+
+            alert("error")
+
+        } 
     })
 
 })
@@ -282,18 +268,19 @@ botonEjercicio.addEventListener('click', ()=> {
             const nameHabito = "Ejercicio";
             const racha = 0;
             const diaRacha = 1;
+            const icono = '<i class="fa-solid fa-dumbbell"></i>';
     
             let habitos;
 
             if (usuarios.habitos) {
 
-                usuarios.habitos.push({nameHabito, racha, diaRacha});
+                usuarios.habitos.push({nameHabito, racha, diaRacha, icono});
     
                 habitos = {habitos: usuarios.habitos}
     
             } else {
     
-                habitos = {habitos: [{nameHabito, racha, diaRacha}]};
+                habitos = {habitos: [{nameHabito, racha, diaRacha, icono}]};
     
             }
     
@@ -308,9 +295,7 @@ botonEjercicio.addEventListener('click', ()=> {
                 console.log(usuarios)
     
                 alert("Nuevo habito iniciado");
-                localStorage.setItem('usuarioLocal' ,JSON.stringify(usuarios))
-    
-                window.location.href = 'index.html'
+                subirUsuario()
     
             }).catch(error => {
     
@@ -322,3 +307,21 @@ botonEjercicio.addEventListener('click', ()=> {
     })
 
 })
+
+// Funcion para que guarde el usuario con el nuevo habito en el local storage
+
+function subirUsuario (){
+
+    fetch(urlApi).then(usuario =>{
+
+        return usuario.json();
+
+    }).then(usuario => {
+
+        console.log(usuario)
+        localStorage.setItem('usuarioLocal', JSON.stringify(usuario))
+        window.location.href = 'index.html';
+
+    })
+
+}
