@@ -44,20 +44,20 @@ botonAñadir.addEventListener('click', () => {
     
                 const nameHabito = nombreHabito;
                 const racha = 0;
-                const diaRacha = 1;
+                const diaUltimaRacha = new Date();
                 const icono = '<i class="fa-solid fa-pen-to-square"></i>';
         
                 let habitos;
     
                 if (usuarios.habitos) {
     
-                    usuarios.habitos.push({nameHabito, racha, diaRacha, icono});
+                    usuarios.habitos.push({nameHabito, racha, diaUltimaRacha, icono});
         
                     habitos = {habitos: usuarios.habitos}
         
                 } else {
         
-                    habitos = {habitos: [{nameHabito, racha, diaRacha, icono}]};
+                    habitos = {habitos: [{nameHabito, racha, diaUltimaRacha, icono}]};
         
                 }
         
@@ -121,20 +121,20 @@ botonLectura.addEventListener('click', () => {
 
             const nameHabito = "Lectura";
             const racha = 0;
-            const diaRacha = 1;
+            const diaUltimaRacha = new Date();
             const icono =  '<i class="fa-solid fa-book-open-reader"></i>';
     
             let habitos;
 
             if (usuarios.habitos) {
 
-                usuarios.habitos.push({nameHabito, racha, diaRacha, icono});
+                usuarios.habitos.push({nameHabito, racha, diaUltimaRacha, icono});
     
                 habitos = {habitos: usuarios.habitos}
     
             } else {
     
-                habitos = {habitos: [{nameHabito, racha, diaRacha, icono}]};
+                habitos = {habitos: [{nameHabito, racha, diaUltimaRacha, icono}]};
     
             }
     
@@ -190,20 +190,20 @@ botonAgua.addEventListener('click', ()=>{
 
             const nameHabito = "Tomar agua";
             const racha = 0;
-            const diaRacha = 1;
+            const diaUltimaRacha = new Date();
             const icono = '<i class="fa-solid fa-bottle-water"></i>';
 
             let habitos;
 
             if (usuarios.habitos) {
 
-                usuarios.habitos.push({nameHabito, racha, diaRacha, icono});
+                usuarios.habitos.push({nameHabito, racha, diaUltimaRacha, icono});
     
                 habitos = {habitos: usuarios.habitos}
     
             } else {
     
-                habitos = {habitos: [{nameHabito, racha, diaRacha, icono}]};
+                habitos = {habitos: [{nameHabito, racha, diaUltimaRacha, icono}]};
     
             }
     
@@ -267,20 +267,20 @@ botonEjercicio.addEventListener('click', ()=> {
 
             const nameHabito = "Ejercicio";
             const racha = 0;
-            const diaRacha = 1;
+            const diaUltimaRacha = new Date();
             const icono = '<i class="fa-solid fa-dumbbell"></i>';
     
             let habitos;
 
             if (usuarios.habitos) {
 
-                usuarios.habitos.push({nameHabito, racha, diaRacha, icono});
+                usuarios.habitos.push({nameHabito, racha, diaUltimaRacha, icono});
     
                 habitos = {habitos: usuarios.habitos}
     
             } else {
     
-                habitos = {habitos: [{nameHabito, racha, diaRacha, icono}]};
+                habitos = {habitos: [{nameHabito, racha, diaUltimaRacha, icono}]};
     
             }
     

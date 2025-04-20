@@ -89,12 +89,65 @@ if (!usuario.habitos){
 
         divTitulo.appendChild(titulo);
         
-        div.appendChild(divIcono)
-        div.appendChild(divTitulo)
+        div.appendChild(divIcono);
+        div.appendChild(divTitulo);
+
+        if(habito.nameHabito == "Ejercicio"){
+
+            div.addEventListener('click', ()=> window.location.href = 'ejercicio.html')
+
+        }
 
         cuerpoHabitos.appendChild(div);
 
+        
+
     })
 
+
+}
+
+// Revisa las rachas que el usuario ha perdido
+
+if (usuario.habitos){
+
+    const urlApi = "https://67feaea558f18d7209ef0910.mockapi.io/usuarios/" +  usuario.id
+
+    const hoy = new Date()
+
+    usuario.habitos.forEach(habito => {
+
+
+        const UltimaRacha = new Date(habito.diaUltimaRacha)
+
+        const diferencia = hoy-UltimaRacha;
+        
+        if(diferencia >= Math.floor(2*(1000*60*60*24))){
+
+            habito.racha = 0;
+
+            fetch(urlApi, {
+
+                method: 'PUT',
+                headers: {'Content-Type':'application/json'},
+                body: JSON.stringify({habitos: usuario.habitos})
+
+            }).then(exito => {
+
+                console.log("Racha perdida")
+                alert("Ups Acabas de perder tu racha de " + habito.nameHabito);
+
+                localStorage.setItem('usuarioLocal', JSON.stringify(usuario));
+
+            }).catch(error => {
+
+                console.log("UPS" , error);
+
+            })
+
+        }
+
+
+    })
 
 }
