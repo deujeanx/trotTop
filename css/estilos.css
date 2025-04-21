@@ -157,3 +157,14 @@ footer {
     background-color: #CCDBDC;
 
 }
+
+/* pagina de dias */
+
+.chulo {
+
+    font-size: 1em;
+    color: green;
+    position: relative;
+    bottom: 50%;
+
+}
