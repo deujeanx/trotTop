@@ -73,6 +73,7 @@ if (!usuario.habitos){
 
     usuario.habitos.forEach(habito => {
 
+
         const div = document.createElement('div');
         div.classList.add('col-12', 'rounded', 'd-flex', 'fondo-oscuro', 'mt-2', 'p-2');
         
@@ -88,13 +89,40 @@ if (!usuario.habitos){
         titulo.textContent = habito.nameHabito;
 
         divTitulo.appendChild(titulo);
+
+        const divRacha = document.createElement('div');
+        const racha = document.createElement('i');
+
+        racha.classList.add('fa-solid', 'fa-fire', 'color-yellow');
+
+        divRacha.classList.add('col','d-flex','justify-content-end');
+
+        const numero = document.createElement('p');
+        numero.textContent = habito.racha;
+
+        divRacha.appendChild(racha);
+        divRacha.appendChild(numero);
         
         div.appendChild(divIcono);
         div.appendChild(divTitulo);
+        div.appendChild(divRacha)
 
         if(habito.nameHabito == "Ejercicio"){
 
             div.addEventListener('click', ()=> window.location.href = 'ejercicio.html')
+
+        } else if(habito.nameHabito == 'Tomar agua'){
+
+            div.addEventListener('click', ()=> window.location.href = 'agua.html')
+
+        } else if (habito.nameHabito == 'Lectura'){
+
+            div.addEventListener('click', ()=> window.location.href = 'lectura.html')
+
+        } else {
+
+            localStorage.setItem('habito', habito.nameHabito);
+            div.addEventListener('click', ()=> window.location.href = 'habitoPersonal.html')
 
         }
 

@@ -14,13 +14,13 @@ const textoModal = document.getElementById('textoModal');
 
 const tituloModal = document.getElementById('exampleModalLabel');
 
-// imprime la cantidad de días que el usuario lleve haciendo ejercicio
+// imprime la cantidad de días que el usuario lleve haciendo Tomar agua
 
 if (usuario.habitos) {
 
     usuario.habitos.forEach(habito => {
 
-        if (habito.nameHabito == "Ejercicio"){
+        if (habito.nameHabito == "Lectura"){
 
             for (let i=0; i<habito.racha; i++){
 
@@ -67,17 +67,17 @@ if (usuario.habitos) {
 
                 
 
-                if (habito.racha%2 == 0) {
+                if (habito.racha < 5) {
 
-                    textoModal.textContent = 'El dia de hoy debes entrenar tus biceps y triceps';
+                    textoModal.textContent = 'El dia de hoy debes leer al menos dos capitulos de un libro, Dale a "LISTO" cuando lo hagas';
 
-                } else if (habito.racha%3 == 0) {
+                } else if (habito.racha < 10) {
 
-                    textoModal.textContent = 'El dia de hoy debes entrenar Tus cuadriceps';
+                    textoModal.textContent = 'El dia de hoy debes leer al menos 3 capitulos de un libro';
 
                 } else {
 
-                    textoModal.textContent = 'El dia de hoy debes entrenar tu pecho y espalda';
+                    textoModal.textContent = 'El dia de hoy debes leer al menos 4 capitulos de un libro';
 
                 }
 
@@ -121,7 +121,7 @@ cuerpo.appendChild(boton);
 
 if (cont == 1) {
 
-    textoModal.textContent = 'El dia de hoy debes entrenar tus cuadriceps'; 
+    textoModal.textContent = 'El dia de hoy debes Leer al menos un capitulo de un libro, Dale a "LISTO" cuando lo hagas';; 
 
 }
 
@@ -131,7 +131,7 @@ botonRacha.addEventListener('click', ()=>{
 
     usuario.habitos.forEach(habito => {
 
-        if (habito.nameHabito == 'Ejercicio'){
+        if (habito.nameHabito == 'Lectura'){
 
             habito.racha ++;
             habito.diaUltimaRacha = new Date();

@@ -8,19 +8,24 @@ console.log(usuario)
 
 let cont = 1;
 
+const habitoAbierto = localStorage.getItem('habito');
+
+const titulo = document.getElementById('tituloHabito');
+titulo.textContent = habitoAbierto;
+
 const url = "https://67feaea558f18d7209ef0910.mockapi.io/usuarios/" + usuario.id;
 
 const textoModal = document.getElementById('textoModal');
 
 const tituloModal = document.getElementById('exampleModalLabel');
 
-// imprime la cantidad de días que el usuario lleve haciendo ejercicio
+// imprime la cantidad de días que el usuario lleve haciendo Tomar agua
 
 if (usuario.habitos) {
 
     usuario.habitos.forEach(habito => {
 
-        if (habito.nameHabito == "Ejercicio"){
+        if (habito.nameHabito == habitoAbierto){
 
             for (let i=0; i<habito.racha; i++){
 
@@ -65,22 +70,6 @@ if (usuario.habitos) {
 
                 cont ++;
 
-                
-
-                if (habito.racha%2 == 0) {
-
-                    textoModal.textContent = 'El dia de hoy debes entrenar tus biceps y triceps';
-
-                } else if (habito.racha%3 == 0) {
-
-                    textoModal.textContent = 'El dia de hoy debes entrenar Tus cuadriceps';
-
-                } else {
-
-                    textoModal.textContent = 'El dia de hoy debes entrenar tu pecho y espalda';
-
-                }
-
             }
 
             
@@ -119,11 +108,7 @@ boton.appendChild(div);
 
 cuerpo.appendChild(boton);
 
-if (cont == 1) {
-
-    textoModal.textContent = 'El dia de hoy debes entrenar tus cuadriceps'; 
-
-}
+textoModal.textContent = 'El dia de hoy debes tomar al menos un litro de agua, Dale a "LISTO" cuando lo hagas'; 
 
 tituloModal.textContent = 'Dia ' + cont;
 
@@ -131,7 +116,7 @@ botonRacha.addEventListener('click', ()=>{
 
     usuario.habitos.forEach(habito => {
 
-        if (habito.nameHabito == 'Ejercicio'){
+        if (habito.nameHabito == habitoAbierto){
 
             habito.racha ++;
             habito.diaUltimaRacha = new Date();
