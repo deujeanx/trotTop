@@ -6,3 +6,10 @@ cerrar.addEventListener('click', ()=>{
     window.location.href = 'index.html'
 
 });
+
+const comentarios = document.getElementById('comentarios');
+comentarios.addEventListener('click', ()=> {
+
+    window.location.href = 'comentarios.html'
+
+})

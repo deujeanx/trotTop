@@ -116,7 +116,7 @@ botonRacha.addEventListener('click', ()=>{
 
     usuario.habitos.forEach(habito => {
 
-        if (habito.nameHabito == habitoAbierto){
+        if (habito.nameHabito == habitoAbierto  ){
 
             habito.racha ++;
             habito.diaUltimaRacha = new Date();

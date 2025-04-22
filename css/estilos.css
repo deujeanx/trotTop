@@ -174,3 +174,21 @@ footer {
     bottom: 50%;
 
 }
+
+/* Zona de comentarios */
+
+#cuerpoComentarios {
+
+    overflow: scroll;
+    height: 25em;
+    scrollbar-width: none;
+
+}
+
+#enviar {
+
+    width: 1.5em;
+    height: 1.5em;
+    padding-right: 1.5em;
+
+}
