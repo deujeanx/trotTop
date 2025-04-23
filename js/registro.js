@@ -29,7 +29,6 @@ botonRegistrar.addEventListener('click', ()=> {
         lector.onload =  ()=> {
 
             image = lector.result;
-            console.log(image);
             const nuevoUsuario = {name, contraseña, image}
 
         fetch(usuariosApi).then(usuarios =>{
@@ -61,7 +60,40 @@ botonRegistrar.addEventListener('click', ()=> {
 
                 }).then(usuarios =>{
 
-                    alert("Usuario registrado exitosamente, Por favor inicie sesion");
+                    fetch(usuariosApi).then(usuarios => {
+
+                        return usuarios.json();
+
+                    }).then(usuarios => {
+
+                        let encontrado = false
+
+                        usuarios.forEach(usuario => {
+
+                            if(usuario.name == name){
+
+                                encontrado = true
+
+                            }
+
+                            console.log(name)
+                            console.log(usuario.name)
+                            console.log(encontrado)
+
+                            if (encontrado == true){
+
+                                alert("Usuario registrado con exito, por favor inicie sesion");
+
+                            }else {
+
+                                alert("!!Hubo un problema por favor vuelva a intentar(Pruebe con otra imagen)");
+
+                            }
+
+
+                        })
+
+                    })
 
                 }).catch(error =>{
                     
