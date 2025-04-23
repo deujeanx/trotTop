@@ -8,6 +8,8 @@ let amigos = NaN;
 
 // Muestra los usuarios que estan registrados en la pagina
 
+console.log(usuario)
+
 fetch(url).then(usuarios => {
 
     return usuarios.json();
@@ -86,19 +88,22 @@ function añadirAmigo(id) {
 
     
 
-    fetch(urlUsuario).then(usuario => {
+    fetch(urlUsuario).then(usuarioApi => {
 
-        return usuario.json();
+        return usuarioApi.json();
 
-    }).then(usuario => {
+    }).then(usuarioApi => {
 
         let permitir = true
 
-        if (usuario.amigos) {
+        if (usuarioApi.amigos) {
 
-            usuario.amigos.forEach(amigo => {
+            usuarioApi.amigos.forEach(amigo => {
 
-                if (amigo.id == id){
+
+                if (amigo == id){
+
+                    console.log("entro")
     
                     permitir = false;
     
@@ -111,6 +116,7 @@ function añadirAmigo(id) {
 
         if (permitir == true) {
 
+
             fetch(urlUsuario, {
 
                 method: 'PUT',
@@ -118,12 +124,22 @@ function añadirAmigo(id) {
                 body: JSON.stringify(amigos)
         
             }).then(exito => {
-        
-                console.log("Amigo añadido")
 
-                localStorage.setItem('usuarioLocal', JSON.stringify(usuario))
+                fetch(urlUsuario).then(usuarioAPP => {
+
+                    return usuarioAPP.json();
+
+                }).then(usuarioAPP => {
+
+                    localStorage.setItem('usuarioLocal', JSON.stringify(usuarioAPP))
         
-               window.location.reload()
+                    alert("Amigo añadido")
+
+                    window.location.reload()
+
+                })
+
+                
         
             }).catch(error => {
         

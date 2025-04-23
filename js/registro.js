@@ -60,15 +60,20 @@ botonRegistrar.addEventListener('click', ()=> {
 
                 }).then(usuarios =>{
 
+                    
+
                     fetch(usuariosApi).then(usuarios => {
 
                         return usuarios.json();
+                        
 
                     }).then(usuarios => {
 
                         let encontrado = false
 
                         usuarios.forEach(usuario => {
+
+                            comprobante = true;
 
                             if(usuario.name == name){
 
@@ -80,24 +85,27 @@ botonRegistrar.addEventListener('click', ()=> {
                             console.log(usuario.name)
                             console.log(encontrado)
 
-                            if (encontrado == true){
-
-                                alert("Usuario registrado con exito, por favor inicie sesion");
-
-                            }else {
-
-                                alert("!!Hubo un problema por favor vuelva a intentar(Pruebe con otra imagen)");
-
-                            }
+                            
 
 
                         })
+
+
+                        if (encontrado == true){
+
+                            alert("Usuario registrado con exito, por favor inicie sesion");
+
+                        }else {
+
+                            alert("!!Hubo un problema por favor vuelva a intentar (Pruebe con otra imagen)");
+
+                        }
 
                     })
 
                 }).catch(error =>{
                     
-                    alert("No se pudo concretar el registro",error);
+                    alert("No se pudo concretar el registro", error);
 
                 })
 
@@ -110,8 +118,6 @@ botonRegistrar.addEventListener('click', ()=> {
         })
 
         }
-
-        console.log(name)
 
 
     } else {

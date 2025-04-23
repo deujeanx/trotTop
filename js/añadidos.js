@@ -9,6 +9,8 @@ let url;
 
 // Imprime los amigos que el usuario alla agregado
 
+console.log(usuario)
+
 usuario.amigos.forEach(amigo => {
 
     url = "https://67feaea558f18d7209ef0910.mockapi.io/usuarios/" + amigo;
