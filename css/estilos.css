@@ -14,7 +14,7 @@
 
 .color-regular {
 
-    color: #007EA7;
+    color: #007EA7 !important;
 
 }
 
@@ -26,7 +26,7 @@
 
 .fondo-oscuro {
 
-    background-color: #003249;
+    background-color: #003249 !important;
 
 }
 
@@ -190,5 +190,15 @@ footer {
     width: 1.5em;
     height: 1.5em;
     padding-right: 1.5em;
+
+}
+
+/* Seccion de amigos */
+
+.circulo-usuario {
+
+    width: 4em;
+    height: 4em;
+    overflow: hidden;
 
 }
