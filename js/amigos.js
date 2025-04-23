@@ -109,7 +109,7 @@ function añadirAmigo(id) {
 
         }
 
-        if (permitir == false) {
+        if (permitir == true) {
 
             fetch(urlUsuario, {
 
