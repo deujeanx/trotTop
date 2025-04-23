@@ -94,16 +94,20 @@ function añadirAmigo(id) {
 
         let permitir = true
 
+        if (usuario.amigos) {
 
-        usuario.amigos.forEach(amigo => {
+            usuario.amigos.forEach(amigo => {
 
-            if (amigo.id == id){
+                if (amigo.id == id){
+    
+                    permitir = false;
+    
+                }
+    
+            })
+    
 
-                permitir = false;
-
-            }
-
-        })
+        }
 
         if (permitir == false) {
 
