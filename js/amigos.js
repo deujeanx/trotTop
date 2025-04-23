@@ -6,6 +6,8 @@ let usuario = JSON.parse(localStorage.getItem('usuarioLocal'));
 
 let amigos = NaN;
 
+// Muestra los usuarios que estan registrados en la pagina
+
 fetch(url).then(usuarios => {
 
     return usuarios.json();
@@ -23,7 +25,8 @@ fetch(url).then(usuarios => {
             columna.classList.add('col-11', 'fondo-claro', 'rounded', 'd-flex', 'p-2', 'mt-2', 'justify-content-between');
 
             const divImage = document.createElement('div');
-            divImage.classList.add('col-1', 'circulo-usuario');
+            divImage.setAttribute('id', 'user')
+            divImage.classList.add('col-1', 'rounded-circle' ,'circulo-usuario');
 
             const image = document.createElement('img');
             image.src = usuarioIMP.image;
@@ -55,6 +58,8 @@ fetch(url).then(usuarios => {
     })
 
 })
+
+// Boton para añadir a los amigos
 
 function añadirAmigo(id) {
 

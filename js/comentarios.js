@@ -65,11 +65,11 @@ function imprimirComentarios() {
 
             const image = document.createElement('img');
             image.src = comentario.userImage;
-            image.classList.add('img-fluid', 'icono-usuario', 'rounded-circle');
+            image.classList.add('img-fluid', 'icono-usuario');
 
             const divImage = document.createElement('div');
-            divImage.classList.add('col-1')
-
+            divImage.classList.add('rounded-circle')
+            divImage.setAttribute('id', 'user')
             divImage.appendChild(image);
 
             row.appendChild(divImage)
