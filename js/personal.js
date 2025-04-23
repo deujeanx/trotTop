@@ -61,7 +61,7 @@ if (usuario.habitos) {
                 boton.appendChild(div);
 
                 const divPadre = document.createElement('div');
-                divPadre.classList.add('col-2')
+                divPadre.classList.add('col-4')
                 divPadre.appendChild(boton)
 
                 cuerpo.appendChild(divPadre);
@@ -108,7 +108,7 @@ boton.appendChild(div);
 
 cuerpo.appendChild(boton);
 
-textoModal.textContent = 'El dia de hoy debes tomar al menos un litro de agua, Dale a "LISTO" cuando lo hagas'; 
+textoModal.textContent = 'Cuando ya hayas completado tu habito de ' + habitoAbierto + ' dale a LISTO'; 
 
 tituloModal.textContent = 'Dia ' + cont;
 

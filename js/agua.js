@@ -56,7 +56,7 @@ if (usuario.habitos) {
                 boton.appendChild(div);
 
                 const divPadre = document.createElement('div');
-                divPadre.classList.add('col-2')
+                divPadre.classList.add('col-4')
                 divPadre.appendChild(boton)
 
                 cuerpo.appendChild(divPadre);
