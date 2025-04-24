@@ -121,8 +121,15 @@ if (!usuario.habitos){
 
         } else {
 
-            localStorage.setItem('habito', habito.nameHabito);
-            div.addEventListener('click', ()=> window.location.href = 'habitoPersonal.html')
+            console.log(habito.nameHabito)
+
+            div.addEventListener('click', ()=>  {
+
+                localStorage.setItem('habito', habito.nameHabito);
+                window.location.href = 'habitoPersonal.html';
+
+
+            })
 
         }
 
