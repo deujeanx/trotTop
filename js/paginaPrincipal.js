@@ -157,7 +157,7 @@ if (usuario.habitos){
 
         const diferencia = hoy-UltimaRacha;
         
-        if(diferencia >= Math.floor(2*(1000*60*60*24))){
+        if(diferencia >= Math.floor(2*(1000*60*60*24)) && habito.racha != 0){
 
             habito.racha = 0;
 

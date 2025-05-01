@@ -4,8 +4,6 @@ const botonRacha = document.getElementById('btnSubir');
 
 const usuario = JSON.parse(localStorage.getItem('usuarioLocal'))
 
-console.log(usuario)
-
 let cont = 1;
 
 const habitoAbierto = localStorage.getItem('habito');
