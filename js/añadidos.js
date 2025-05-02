@@ -22,7 +22,7 @@ usuario.amigos.forEach(amigo => {
     }).then(amigoUsuario => {
 
         const columna = document.createElement('div');
-        columna.classList.add('col-11', 'rounded', 'fondo-oscuro');
+        columna.classList.add('col-11', 'rounded', 'mt-2' , 'fondo-oscuro');
 
         const columnaImagen = document.createElement('div');
         columnaImagen.setAttribute('id', 'user');
