@@ -1,4 +1,10 @@
 /* General */
+footer {
+
+    position: absolute;
+    bottom: 100%;
+
+}
 
 .fondo-claro {
 
